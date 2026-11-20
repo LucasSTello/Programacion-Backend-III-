@@ -1,0 +1,32 @@
+{
+  "name": "adoptme",
+  "version": "1.0.0",
+  "description": "API de adopción de mascotas - Programación Backend III",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "mocha test/adoption.router.test.js --timeout 15000 --exit"
+  },
+  "keywords": ["express", "mongodb", "docker", "swagger"],
+  "author": "Lucas Tello",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^9.0.0",
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.0",
+    "multer": "^2.0.2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "chai": "^4.5.0",
+    "mocha": "^10.8.2",
+    "supertest": "^7.0.0"
+  }
+}

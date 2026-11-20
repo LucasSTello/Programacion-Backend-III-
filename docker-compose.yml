@@ -1,0 +1,24 @@
+services:
+  mongo:
+    image: mongo:7
+    container_name: adoptme-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  app:
+    # Cambiá luk45t por tu usuario de Docker Hub (o usá "build: ." para construir localmente)
+    image: luk45t/adoptme:1.0.0
+    build: .
+    container_name: adoptme-app
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - MONGO_URL=mongodb://mongo:27017/adoptme
+    depends_on:
+      - mongo
+
+volumes:
+  mongo-data:

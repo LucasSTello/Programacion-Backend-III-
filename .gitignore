@@ -1,0 +1,8 @@
+node_modules
+.env
+entrega.log
+subir-github.log
+diagnostico.bat
+diagnostico.log
+entregar.bat
+subir-github.bat
